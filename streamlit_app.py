@@ -44,7 +44,7 @@ def get_video(task_id):
     return json.loads(data.decode("utf-8"))
 
 # Database connection
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:root@localhost/test?charset=utf8mb4"
+SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:3ZXwD21Xk9uMao9Z7BJPu3WHKPzh2oElCoUvLxMXFp7X0hrOHWLRJYCO9yqpmQxv@167.71.42.178:5432/default?charset=utf8mb4"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
