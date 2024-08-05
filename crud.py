@@ -23,7 +23,7 @@ def create_user(db: Session, user: schemas.UserCreate):
     db_user = models.UserCreate(email=user.email, hashed_password=fake_hashed_password, title_company=user.title_company,
     adres=user.adres, lng=user.lng, lat=user.lat, year_of_foundation=user.year_of_foundation, houses_were_delivered=user.houses_were_delivered,
     houses_in_the_process=user.houses_in_the_process, in_the_process_suburban_type=user.in_the_process_suburban_type,
-    suburban_type=user.suburban_type, website=user.website, phone=user.phone, is_active=user.is_active)
+    suburban_type=user.suburban_type, website=user.website, phone=user.phone, weekdays=user.weekdays, weekend=user.weekend, is_active=user.is_active)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)

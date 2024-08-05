@@ -23,6 +23,8 @@ class UserCreate(Base):
     in_the_process_suburban_type = Column(Integer, index=True)
     suburban_type = Column(Integer, index=True)
     website = Column(String(60), index=True)
+    weekdays = Column(String(20), index=True)
+    weekend = Column(String(20), index=True)
     is_active = Column(Boolean, default=True)
 
     items = relationship("ItemCreate", back_populates="owner")

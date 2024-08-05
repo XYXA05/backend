@@ -180,6 +180,8 @@ class UserCreate(BaseModel):
     in_the_process_suburban_type: int
     suburban_type: int
     website: str
+    weekdays: str
+    weekend: str
     is_active: bool
 
 
@@ -198,6 +200,8 @@ class User(UserBase):
     in_the_process_suburban_type: Optional[int] = None
     suburban_type: Optional[int] = None
     website: Optional[str] = None
+    weekdays: Optional[str] = None
+    weekend: Optional[str] = None
     items: List[Item] = []
 
     class Config:
