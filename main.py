@@ -4,6 +4,7 @@ app = FastAPI()
 from fastapi.middleware.cors import CORSMiddleware
 origins = [
     "https://www.mark-build.com",  # Angular frontend origin
+    "https://b4kg48k.mark-build.com"
 ]
 
 app.add_middleware(
