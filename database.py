@@ -7,7 +7,9 @@ SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:3ZXwD21Xk9uMao9Z7BJPu3WHKPzh2oEl
 
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL
+    SQLALCHEMY_DATABASE_URL,
+    pool_recycle=280,
+    pool_pre_ping=True  # Checks the connection before using it
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
